@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.input-field{
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+
+}
+.d-flex{
+  display: flex;
+}
+.circle{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+
+}
+.d-flex-ac{
+  display: flex;
+  align-items: center;
+}
+.mgTB15{
+  margin: 15px 0px;
+}
+.ant-drawer-body {
+  padding: 0px!important;
+}
+.edit-option-text{  
+  font-weight: 500;
+  color: darkgray;
+}
+@media screen and (max-width: 600px) {
+  .ant-modal-body {
+    padding: 0px!important;
+  }
+  }
+
+  /* here starts */
+  .ant-menu.ant-menu-dark{
+    background: black!important;
+  }
+  .ant-layout-sider-children {
+    background: black!important;
+    height:100vh!important;
+
+  }
+  .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected{
+    background-color: white!important;
+  }
+  .ant-input:not(textarea) {
+    font-weight: 500;
+  }
+  .buttonCssWhite{
+    border: 1.5px solid black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 4px 10px;
+    font-weight: 500;
+    color: black;
+  }
+  .buttonCssBlack{
+    border: 1.5px solid black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 4px 10px;
+    font-weight: 500;
+    background: black;
+    color: white;
+  }
+  .ellipse{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display: -webkit-box !important;
+    cursor: pointer;
+  }
+  .mid-center{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+   
+  .width-100Percentage{
+    width: 100%;
+
+  }
+  .ant-modal-content {
+    border: 2px solid #8b8bbe !important;
+    padding: 20px 33px;
+    border-radius: 10px;
+
+}
+@media screen and (max-width: 600px) {
+    .ant-modal-content {
+        border: 2px solid #8b8bbe !important;
+        padding: 30px 33px;
+        border-radius: 10px;
+    
+    }
+}
